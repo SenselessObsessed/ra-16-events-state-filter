@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ProjectList from './ProjectList';
+import PropTypes from 'prop-types';
 import Toolbar from './Toolbar';
 
 function Portfolio({ data }) {
@@ -31,5 +32,9 @@ function Portfolio({ data }) {
 		</>
 	);
 }
+
+Portfolio.propTypes = {
+	data: PropTypes.array.isRequired,
+};
 
 export default Portfolio;

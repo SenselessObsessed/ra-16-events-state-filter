@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function Toolbar({ filters, selected, onSelectFilter }) {
 	return (
 		<div>
@@ -15,5 +17,11 @@ function Toolbar({ filters, selected, onSelectFilter }) {
 		</div>
 	);
 }
+
+Toolbar.propTypes = {
+	filters: PropTypes.array.isRequired,
+	selected: PropTypes.string.isRequired,
+	onSelectFilter: PropTypes.func.isRequired,
+};
 
 export default Toolbar;

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function ProjectList({ data, selected }) {
 	return (
 		<div
@@ -18,5 +20,10 @@ function ProjectList({ data, selected }) {
 		</div>
 	);
 }
+
+ProjectList.propTypes = {
+	data: PropTypes.array.isRequired,
+	selected: PropTypes.string.isRequired,
+};
 
 export default ProjectList;
